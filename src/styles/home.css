@@ -1,0 +1,34 @@
+.home-container {
+  position: relative;
+  height: 223px;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+.home-container .home-banner {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+}
+.home-container .title-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.53);
+  color: white;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+}
+.home-container .title-container h2 {
+  font-weight: 700;
+  font-size: 48px;
+}/*# sourceMappingURL=home.css.map */

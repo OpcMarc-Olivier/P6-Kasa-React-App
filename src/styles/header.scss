@@ -1,11 +1,10 @@
 .header{
-    background-color: orange;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     height: 68px;
     margin:auto;
+    margin-bottom: 45px;
     
     &__navBar{
         display: flex;
