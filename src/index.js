@@ -4,9 +4,7 @@ import App from './components/App';
 import {BrowserRouter} from 'react-router-dom';
 import HeaderNav from './components/layout/HeaderNav';
 import Footer from './components/layout/Footer';
-
-
-
+import './styles/index.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

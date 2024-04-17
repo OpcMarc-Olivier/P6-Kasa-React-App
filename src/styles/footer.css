@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+.footer__logo {
+  height: 40px;
+}
+.footer__p {
+  color: white;
+}/*# sourceMappingURL=footer.css.map */
