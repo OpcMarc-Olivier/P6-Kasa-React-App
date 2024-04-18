@@ -1,11 +1,14 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Montserrat;
-    
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
 }
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-body{
-padding: 45px;
+body {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 45px 90px 45px 90px;
 }
