@@ -3,7 +3,7 @@
   height: 223px;
   border-radius: 15px;
   box-sizing: border-box;
-  margin-bottom: 45px;
+  margin: 0 90px 45px 90px;
 }
 .banner-container .banner-img {
   -o-object-fit: cover;

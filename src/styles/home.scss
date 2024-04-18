@@ -6,5 +6,6 @@
   grid-template-columns: repeat(3, minmax(340px, 1fr));
   grid-template-rows: repeat(2, 360px);
   grid-auto-rows: 360px;
-  gap: 4rem;
+  gap: 3rem;
+  margin: 0 90px;
 }

@@ -1,19 +1,18 @@
-.header{
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 68px;
+  margin: auto;
+  padding: 45px 90px 45px 90px;
+
+  &__navBar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 68px;
-    margin:auto;
-    margin-bottom: 45px;
-    
-    &__navBar{
-        display: flex;
-        gap: 57px;
-      
-    }
+    gap: 57px;
+  }
 }
 
 a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
