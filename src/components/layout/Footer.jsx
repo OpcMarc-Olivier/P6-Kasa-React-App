@@ -1,13 +1,17 @@
-import React from 'react'
-import '../../styles/footer.css'
+import React from "react";
+import "../../styles/footer.css";
 
 function Footer() {
   return (
-   <footer className='footer'>
-        <img className='footer__logo' src="./LOGO.svg" alt="logo kasa application" />
-        <p className='footer__p'>@all rights reserved</p>
+    <footer className="footer">
+      <img
+        className="footer__logo"
+        src="./logo-kasa-blanc.svg"
+        alt="logo kasa application"
+      />
+      <p className="footer__p"> @2020 Kasa. All rights reserved</p>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
