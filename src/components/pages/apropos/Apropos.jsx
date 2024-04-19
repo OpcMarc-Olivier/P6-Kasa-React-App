@@ -10,13 +10,6 @@ function Apropos() {
     title: "",
   });
 
-  // const bannerProps = {
-  //   image: "./imagesource1.jpg",
-  //   alt: "Falaise océan",
-  //   title: "Chez vous, partout et ailleurs",
-  // };
-  //comportements
-
   //render
   return (
     <div>
