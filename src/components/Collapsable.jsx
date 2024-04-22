@@ -1,13 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/collapsable.css";
 
-function Collapsable({ label }) {
+function Collapsable({ headLabel, children }) {
+  //state
+  const [isOpen, setIsOpen] = useState(false);
+
+  //comportements
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
+  //render
   return (
     <div className="collapsable-item">
-      Collapsable
-      <button>
-        <img src="../assets/icons/arrow-collapse.svg" alt="" />
-      </button>
+      <div className="collapsable-head">
+        <span>{headLabel}</span>
+        <button className="toggle" onClick={handleClick}>
+          <img
+            className={
+              isOpen
+                ? "arrow-icon arrow-icon-open"
+                : "arrow-icon arrow-icon-closed"
+            }
+            src="./arrow-collapse.svg"
+            alt="logo kasa application"
+          />
+        </button>
+      </div>
+      {isOpen && (
+        <div className="collapsable-content">
+          <p>{children}</p>
+        </div>
+      )}
     </div>
   );
 }
