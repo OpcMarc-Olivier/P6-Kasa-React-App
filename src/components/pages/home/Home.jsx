@@ -1,13 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../../styles/home.css";
 import { useState } from "react";
-import data from "../../../assets/data.json";
 import Card from "../../Card";
 import Banner from "../../Banner";
 import { useNavigate } from "react-router-dom";
-function Home() {
-  //state
-  const [dataHome, setdataHome] = useState(data);
+function Home({ dataHome }) {
   const navigate = useNavigate();
   const bannerProps = {
     image: "./imagesource1.jpg",
@@ -15,8 +12,8 @@ function Home() {
     title: "Chez vous, partout et ailleurs",
   };
   //comportements
-  const handleClick = () => {
-    navigate("/logement");
+  const handleClick = (data) => {
+    navigate(`/logement/${data.id}`);
   };
   //render
   return (
@@ -28,7 +25,11 @@ function Home() {
       />
       <ul className="home-gallery">
         {dataHome.map((data) => (
-          <Card key={data.id} onCardClick={handleClick} dataCard={data} />
+          <Card
+            key={data.id}
+            onCardClick={() => handleClick(data)}
+            dataCard={data}
+          />
         ))}
       </ul>
     </div>
