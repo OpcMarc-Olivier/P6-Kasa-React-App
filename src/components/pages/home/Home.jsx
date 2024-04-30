@@ -4,17 +4,33 @@ import { useState } from "react";
 import Card from "../../Card";
 import Banner from "../../Banner";
 import { useNavigate } from "react-router-dom";
-function Home({ dataHome }) {
-  const navigate = useNavigate();
+function Home() {
+  //state
+  const [dataHome, setdataHome] = useState([]);
   const bannerProps = {
     image: "./imagesource1.jpg",
     alt: "Falaise océan",
     title: "Chez vous, partout et ailleurs",
   };
   //comportements
+  const navigate = useNavigate();
   const handleClick = (data) => {
     navigate(`/logement/${data.id}`);
+    navigate(`/logement/${!data.id}`);
   };
+  useEffect(() => {
+    fetch("/data.json")
+      .then((res) => res.json())
+      .then((data) => {
+        return data;
+      })
+      .then((data) => {
+        setdataHome(data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  });
   //render
   return (
     <div className="home-wrapper">

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/collapsable.css";
+import arrowCollapse from "../assets/icons/arrow-collapse.svg";
 
 function Collapsable({ headLabel, children }) {
   //state
@@ -22,16 +23,12 @@ function Collapsable({ headLabel, children }) {
                 ? "arrow-icon arrow-icon-open"
                 : "arrow-icon arrow-icon-closed"
             }
-            src="./arrow-collapse.svg"
+            src={arrowCollapse}
             alt="logo kasa application"
           />
         </button>
       </div>
-      {isOpen && (
-        <div className="collapsable-content">
-          <p>{children}</p>
-        </div>
-      )}
+      {isOpen && <div className="collapsable-content">{children}</div>}
     </div>
   );
 }
