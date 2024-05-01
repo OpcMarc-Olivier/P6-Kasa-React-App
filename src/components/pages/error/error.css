@@ -1,0 +1,37 @@
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 139px;
+  margin: 100px 0;
+  color: #ff6060;
+}
+.error-page .title-content {
+  font-size: 288px;
+  font-style: normal;
+  line-height: 76%;
+}
+.error-page p {
+  font-size: 36px;
+}
+.error-page a {
+  color: black;
+  text-decoration: underline;
+}
+
+@media (max-width: 375px) {
+  .error-page {
+    gap: 7.063rem;
+  }
+  .error-page .title-content {
+    font-size: 6rem;
+  }
+  .error-page p {
+    font-size: 1.125rem;
+    width: 13.2rem;
+  }
+  .error-page a {
+    font-size: 0.875rem;
+  }
+}/*# sourceMappingURL=error.css.map */

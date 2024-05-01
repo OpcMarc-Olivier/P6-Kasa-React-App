@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Banner from "../../Banner";
-import Collapsable from "../../Collapsable";
-
+import Banner from "../../generics/banner/Banner";
+import Collapsable from "../../generics/collapsable/Collapsable";
+import "./apropos.css";
 function Apropos() {
   //state
   const [bannerProps, setBannerProps] = useState({
@@ -25,18 +25,20 @@ function Apropos() {
         imageAlt={bannerProps.alt}
         imageTitle={bannerProps.title}
       />
-      <Collapsable headLabel="Fiabilité">
-        <p>{collapsableContent[0]}</p>
-      </Collapsable>
-      <Collapsable headLabel="Respect">
-        <p>{collapsableContent[1]}</p>
-      </Collapsable>
-      <Collapsable headLabel="Service">
-        <p>{collapsableContent[2]}</p>
-      </Collapsable>
-      <Collapsable headLabel="sécurité">
-        <p>{collapsableContent[3]}</p>
-      </Collapsable>
+      <div className="collapse-section">
+        <Collapsable headLabel="Fiabilité">
+          <p>{collapsableContent[0]}</p>
+        </Collapsable>
+        <Collapsable headLabel="Respect">
+          <p>{collapsableContent[1]}</p>
+        </Collapsable>
+        <Collapsable headLabel="Service">
+          <p>{collapsableContent[2]}</p>
+        </Collapsable>
+        <Collapsable headLabel="sécurité">
+          <p>{collapsableContent[3]}</p>
+        </Collapsable>
+      </div>
     </div>
   );
 }

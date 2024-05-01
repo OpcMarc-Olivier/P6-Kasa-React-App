@@ -1,0 +1,9 @@
+.collapse-section {
+  margin-top: unset;
+}
+
+@media (max-width: 375px) {
+  .collapse-section {
+    margin-top: 1.25rem;
+  }
+}

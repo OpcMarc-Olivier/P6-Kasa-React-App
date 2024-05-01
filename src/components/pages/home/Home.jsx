@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import "../../../styles/home.css";
+import "./home.css";
 import { useState } from "react";
-import Card from "../../Card";
-import Banner from "../../Banner";
+import Card from "../../generics/card/Card";
+import Banner from "../../generics/banner/Banner";
 import { useNavigate } from "react-router-dom";
 function Home() {
   //state
@@ -16,8 +16,8 @@ function Home() {
   const navigate = useNavigate();
   const handleClick = (data) => {
     navigate(`/logement/${data.id}`);
-    navigate(`/logement/${!data.id}`);
   };
+
   useEffect(() => {
     fetch("/data.json")
       .then((res) => res.json())
