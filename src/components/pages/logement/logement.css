@@ -52,6 +52,13 @@
   flex-direction: column;
   gap: 20px;
 }
+.logement .home-content .home-header-section2 .rating {
+  display: flex;
+  gap: 15px;
+}
+.logement .home-content .home-header-section2 .rating .star {
+  height: 30px;
+}
 .logement .home-content .home-header-section2 .home-thumb {
   display: flex;
   align-items: center;
@@ -105,6 +112,9 @@
   .logement .home-content .home-header .home-header-section1 .home-titles p {
     font-size: 14px;
   }
+  .logement .home-content .home-header .home-header-section1 .tags-ctn {
+    flex-wrap: wrap;
+  }
   .logement .home-content .home-header .home-header-section2 {
     display: flex;
     flex-direction: row-reverse;
@@ -118,13 +128,12 @@
     height: 32px;
     width: 32px;
   }
-  .logement .home-content .home-header .home-header-section2 .rate-ctn {
+  .logement .home-content .home-header .home-header-section2 .rating {
     display: flex;
-    justify-content: flex-start;
+    gap: 5px;
   }
-  .logement .home-content .home-header .home-header-section2 .rate-ctn svg {
+  .logement .home-content .home-header .home-header-section2 .rating .star {
     height: 18px;
-    width: 100%;
   }
   .logement .home-content .home-infos {
     display: flex;

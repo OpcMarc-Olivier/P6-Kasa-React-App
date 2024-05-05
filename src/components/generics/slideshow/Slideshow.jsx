@@ -28,7 +28,6 @@ function Slideshow({ homeId, dataHomeId }) {
       .then((res) => res.json())
       .then((data) => {
         const foundHome = data.find((data) => data.id === homeId);
-        console.log(foundHome.pictures);
         foundHome.pictures
           ? setSliderState(foundHome.pictures)
           : navigate("/*");

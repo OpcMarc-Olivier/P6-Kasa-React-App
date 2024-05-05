@@ -54,6 +54,15 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+
+      .rating {
+        display: flex;
+        gap: 15px;
+        .star {
+          height: 30px;
+        }
+      }
+
       .home-thumb {
         display: flex;
         align-items: center;
@@ -109,6 +118,9 @@
           .home-titles p {
             font-size: 14px;
           }
+          .tags-ctn {
+            flex-wrap: wrap;
+          }
         }
         .home-header-section2 {
           display: flex;
@@ -122,12 +134,11 @@
               width: 32px;
             }
           }
-          .rate-ctn {
+          .rating {
             display: flex;
-            justify-content: flex-start;
-            svg {
+            gap: 5px;
+            .star {
               height: 18px;
-              width: 100%;
             }
           }
         }
