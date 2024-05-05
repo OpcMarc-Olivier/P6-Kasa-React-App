@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Slideshow from "../../generics/slideshow/Slideshow";
 import "./logement.css";
 import star from "../../../assets/icons/star-solid.svg";
@@ -9,24 +9,29 @@ function Logement() {
   //state
   const [dataHomeId, setDataHomeId] = useState([]);
   const { homeId } = useParams();
+  const navigate = useNavigate();
 
   //comportements
+
   useEffect(() => {
     fetch("/data.json")
       .then((res) => res.json())
       .then((data) => {
         const foundHome = data.find((data) => data.id === homeId);
-        setDataHomeId(foundHome);
+        foundHome ? setDataHomeId(foundHome) : navigate("/*");
       })
       .catch((error) => {
         console.error(error);
       });
+    if (!homeId) {
+      navigate("/*");
+    }
   }, []);
 
   //render
   return (
     <div className="logement">
-      <Slideshow homeId={homeId} />
+      <Slideshow homeId={homeId} dataHomeId={dataHomeId} />
       <div className="home-content">
         <div className="home-header">
           <div className="home-header-section1">

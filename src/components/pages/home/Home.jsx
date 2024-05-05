@@ -30,7 +30,7 @@ function Home() {
       .catch((error) => {
         console.error(error);
       });
-  });
+  }, []);
   //render
   return (
     <div className="home-wrapper">

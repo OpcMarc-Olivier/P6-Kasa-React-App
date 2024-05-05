@@ -21,12 +21,12 @@
   background: 0;
 }
 .collapsable-item .collapsable-head .arrow-icon-closed {
-  transform: rotate(-180deg);
-  transition: transform ease 0.6s;
+  transform: rotate(0deg);
+  transition: transform ease 0.3s;
 }
 .collapsable-item .collapsable-head .arrow-icon-open {
-  transform: rotate(180deg);
-  transition: transform ease 0.6s;
+  transform: rotate(-180deg);
+  transition: transform ease 0.3s;
 }
 .collapsable-item .collapsable-content {
   padding: 1rem;

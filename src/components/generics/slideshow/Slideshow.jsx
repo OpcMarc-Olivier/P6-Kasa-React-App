@@ -3,13 +3,14 @@ import "./slidershow.css";
 import datajson from "../../../assets/data.json";
 import prevArrow from "../../../assets/icons/arrow-left.svg";
 import nextArrow from "../../../assets/icons/arrow-right.svg";
+import { useNavigate } from "react-router-dom";
 
-function Slideshow({ homeId }) {
+function Slideshow({ homeId, dataHomeId }) {
   //state
   const [sliderState, setSliderState] = useState([]);
   const [slideClass, setSlideClass] = useState("slide");
   const [current, setCurrent] = useState(0);
-
+  const navigate = useNavigate();
   const lengthPic = sliderState.length;
 
   //   comportement;
@@ -23,10 +24,18 @@ function Slideshow({ homeId }) {
   };
 
   useEffect(() => {
-    const found = datajson.find((data) => data.id === homeId);
-    const picturesHome = found.pictures;
-    setSliderState(picturesHome);
-    const pic = picturesHome?.length;
+    fetch("/data.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const foundHome = data.find((data) => data.id === homeId);
+        console.log(foundHome.pictures);
+        foundHome.pictures
+          ? setSliderState(foundHome.pictures)
+          : navigate("/*");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }, []);
 
   //render
@@ -43,7 +52,7 @@ function Slideshow({ homeId }) {
         </button>
       )}
       <ul className="carroussel">
-        {sliderState.map(
+        {sliderState?.map(
           (data, i) =>
             i === current && (
               <li className={slideClass} key={i}>

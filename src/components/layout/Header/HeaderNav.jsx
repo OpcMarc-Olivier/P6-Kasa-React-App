@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./header.css";
+import logo from "../../../assets/icons/LOGO.svg";
 
 function HeaderNav() {
   //state
@@ -11,11 +12,7 @@ function HeaderNav() {
   return (
     <header>
       <nav className="header">
-        <img
-          className="header__logo"
-          src="./LOGO.svg"
-          alt="logo kasa application"
-        />
+        <img className="header__logo" src={logo} alt="logo kasa application" />
         <div className="header__navBar">
           <NavLink className={handleClickNav} to="/">
             Accueil
