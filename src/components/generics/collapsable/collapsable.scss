@@ -3,7 +3,7 @@ $primaryColor: #ff6060;
 .collapsable-item {
   width: 1023px;
   height: auto;
-  margin: auto;
+
   margin-bottom: 1rem;
   background: rgba(246, 246, 246, 0.45);
   border-radius: 5px;
@@ -22,10 +22,12 @@ $primaryColor: #ff6060;
       background: 0;
     }
     .arrow-icon-closed {
+      height: 12px;
       transform: rotate(0deg);
       transition: transform ease 0.3s;
     }
     .arrow-icon-open {
+      height: 12px;
       transform: rotate(-180deg);
       transition: transform ease 0.3s;
     }
@@ -38,6 +40,12 @@ $primaryColor: #ff6060;
 @media (max-width: 375px) {
   .collapsable-item {
     width: 20.313rem;
-    font-size: 13px;
+
+    .collapsable-head {
+      font-size: 13px;
+    }
+    .collapsable-content {
+      font-size: 12px;
+    }
   }
 }

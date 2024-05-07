@@ -35,7 +35,7 @@ function Apropos() {
         <Collapsable headLabel="Service">
           <p>{collapsableContent[2]}</p>
         </Collapsable>
-        <Collapsable headLabel="sécurité">
+        <Collapsable headLabel="Sécurité">
           <p>{collapsableContent[3]}</p>
         </Collapsable>
       </div>
